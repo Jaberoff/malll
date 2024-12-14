@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* Clocks Container */
+.clocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual Clock */
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 8px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+/* Clock Face */
+.clock-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clock Hands */
+.clock-hand {
+    position: absolute;
+    background-color: #333;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+/* Hour, Minute, and Second Hands */
+.clock .hour-hand {
+    width: 8px;
+    height: 60px;
+    top: 40px;
+    transform-origin: 50% 100%;
+}
+
+.clock .minute-hand {
+    width: 4px;
+    height: 75px;
+    top: 30px;
+    transform-origin: 50% 100%;
+}
+
+.clock .second-hand {
+    width: 2px;
+    height: 85px;
+    top: 20px;
+    background-color: red;
+    transform-origin: 50% 100%;
+}
+
+/* Clock Label */
+.clock-label {
+    position: absolute;
+    bottom: -40px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .clock {
+        width: 150px;
+        height: 150px;
+    }
+
+    .clock-label {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
